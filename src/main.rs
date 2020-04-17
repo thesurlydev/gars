@@ -17,7 +17,7 @@ fn main() {
           let msg = c.clone();
           ctx.set_contents(c.to_owned()).unwrap();
           println!("{}", msg);
-        }
+        },
         Err(e) => eprintln!("No Google Authenticator code returned: {:?}", e)
       }
     },
