@@ -1,0 +1,11 @@
+[package]
+name = "gars"
+version = "0.1.0"
+authors = ["shane <shane@digitalsanctum.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+google-authenticator = "0.1.9"
+clipboard = "0.5.0"
