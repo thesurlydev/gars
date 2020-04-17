@@ -1,7 +1,7 @@
 extern crate clipboard;
 
 use clipboard::ClipboardProvider;
-use clipboard::ClipboardContext;
+use clipboard_ext::x11_fork::ClipboardContext;
 use google_authenticator::GoogleAuthenticator;
 use google_authenticator::GAError;
 
