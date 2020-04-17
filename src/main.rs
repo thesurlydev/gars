@@ -20,7 +20,7 @@ fn main() {
         }
         Err(e) => eprintln!("No Google Authenticator code returned: {:?}", e)
       }
-    }
+    },
     None => eprintln!("Missing GA_SECRET environment variable!")
   }
 }
