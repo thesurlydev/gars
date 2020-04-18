@@ -1,11 +1,22 @@
 extern crate clipboard;
 
+use std::error::Error;
 use clipboard::ClipboardProvider;
 use clipboard_ext::x11_fork::ClipboardContext;
 use google_authenticator::GoogleAuthenticator;
 use google_authenticator::GAError;
+use structopt::StructOpt;
 
-fn main() {
+#[derive(StructOpt, Debug)]
+#[structopt(name = "gars", about = "Google Authenticator automation in Rust")]
+enum Gars {
+  AddSecret,
+  Get
+}
+
+fn main() -> Result<(), Box<dyn Error>> {
+  // Gars::from_args();
+
   let maybe_secret: Option<&'static str> = option_env!("GA_SECRET");
   match maybe_secret {
     Some(s) => {
@@ -23,4 +34,5 @@ fn main() {
     },
     None => eprintln!("Missing GA_SECRET environment variable!")
   }
+  Ok(())
 }
