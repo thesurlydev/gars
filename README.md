@@ -1,6 +1,6 @@
 # Google Authenticator for Rust (GARS)
 
-If you use Google Authenticator for multi-factor authentication (MFA) and would like to automate authentication, 
+If you use [Google Authenticator](https://github.com/google/google-authenticator) for multi-factor authentication (MFA) and would like to automate authentication, 
 then GARS is for you.
 
 
