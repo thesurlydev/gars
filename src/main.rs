@@ -1,37 +1,10 @@
-extern crate clipboard;
-
 use std::error::Error;
-use clipboard::ClipboardProvider;
-use clipboard_ext::x11_fork::ClipboardContext;
 use google_authenticator::GoogleAuthenticator;
-use google_authenticator::GAError;
-use structopt::StructOpt;
-
-#[derive(StructOpt, Debug)]
-#[structopt(name = "gars", about = "Google Authenticator automation in Rust")]
-enum Gars {
-  AddSecret,
-  Get
-}
 
 fn main() -> Result<(), Box<dyn Error>> {
-  // Gars::from_args();
-
   let maybe_secret: Option<&'static str> = option_env!("GA_SECRET");
   match maybe_secret {
-    Some(s) => {
-      let auth = GoogleAuthenticator::new();
-      let maybe_code: Result<String, GAError> = auth.get_code(s, 0);
-      match maybe_code {
-        Ok(c) => {
-          let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
-          let msg = c.clone();
-          ctx.set_contents(c.to_owned()).unwrap();
-          println!("{}", msg);
-        },
-        Err(e) => eprintln!("No Google Authenticator code returned: {:?}", e)
-      }
-    },
+    Some(s) => println!("{}", GoogleAuthenticator::new().get_code(s, 0)?),
     None => eprintln!("Missing GA_SECRET environment variable!")
   }
   Ok(())
