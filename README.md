@@ -1,6 +1,6 @@
 # Google Authenticator for Rust (GARS)
 
-If you use Google Authenticator for multi-factor authentication (MFA) and would like to automate authentication, 
+If you use [Google Authenticator](https://github.com/google/google-authenticator) for multi-factor authentication (MFA) and would like to automate authentication, 
 then GARS is for you.
 
 
@@ -21,7 +21,7 @@ $ gars
 
 `gars` will return the latest Google Authenticator generated number associated with the given GA secret to stdout.
 
-It will also copy the number to your clipboard. Tested on Ubuntu Linux and Mac OS X. 
+Tested on Ubuntu Linux and Mac OS X. 
 
 
 ## Why was GARS created?
