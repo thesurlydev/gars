@@ -1,11 +1,19 @@
-use std::error::Error;
 use google_authenticator::GoogleAuthenticator;
+use std::{env, error::Error};
+
+const ENV_KEY: &str = "GA_SECRET";
 
 fn main() -> Result<(), Box<dyn Error>> {
-  let maybe_secret: Option<&'static str> = option_env!("GA_SECRET");
+  let maybe_secret = env::var(ENV_KEY);
   match maybe_secret {
-    Some(s) => println!("{}", GoogleAuthenticator::new().get_code(s, 0)?),
-    None => eprintln!("Missing GA_SECRET environment variable!")
+    Ok(s) => {
+      let c = GoogleAuthenticator::new().get_code(&s, 0)?;
+      println!("{}", c);
+      std::process::exit(0)
+    }
+    Err(_) => {
+      eprintln!("Missing {} environment variable!", ENV_KEY);
+      std::process::exit(1)
+    }
   }
-  Ok(())
 }
