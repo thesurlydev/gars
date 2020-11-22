@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.0.5] - 2020-11-22
+
+### Changed
+
+- Upgraded `google-authenticator` to version `0.2.1`
+
 ## [0.0.4] - 2020-06-30
 
 - Initial release.

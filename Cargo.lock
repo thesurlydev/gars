@@ -14,7 +14,7 @@ checksum = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
 
 [[package]]
 name = "gars"
-version = "0.0.4"
+version = "0.0.5"
 dependencies = [
  "google-authenticator",
 ]
@@ -32,15 +32,15 @@ dependencies = [
 
 [[package]]
 name = "google-authenticator"
-version = "0.1.9"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ee8a9008b10254a6202c7502c891a5c55c8f7bbe098ce46b63a35b303db3754"
+checksum = "48155399235e0be272cf2235f7466e5dc4766c7f5dca7585775d11be389f7467"
 dependencies = [
  "base32",
  "hmac-sha1",
  "lazy_static",
+ "percent-encoding",
  "rand",
- "urlencoding",
 ]
 
 [[package]]
@@ -63,6 +63,12 @@ name = "libc"
 version = "0.2.68"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dea0c0405123bba743ee3f91f49b1c7cfb684eef0da0a50110f758ccf24cdff0"
+
+[[package]]
+name = "percent-encoding"
+version = "2.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e"
 
 [[package]]
 name = "ppv-lite86"
@@ -116,12 +122,6 @@ name = "sha1"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cc30b1e1e8c40c121ca33b86c23308a090d19974ef001b4bf6e61fd1a0fb095c"
-
-[[package]]
-name = "urlencoding"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3df3561629a8bb4c57e5a2e4c43348d9e29c7c29d9b1c4c1f47166deca8f37ed"
 
 [[package]]
 name = "wasi"

@@ -1,6 +1,6 @@
 [package]
 name = "gars"
-version = "0.0.4"
+version = "0.0.5"
 description = "Google Authenticator CLI."
 authors = ["shane <shane@digitalsanctum.com>"]
 edition = "2018"
@@ -9,4 +9,4 @@ readme = "README.md"
 repository = "https://github.com/digitalsanctum/gars/"
 
 [dependencies]
-google-authenticator = "0.1.9"
+google-authenticator = "0.2.1"
