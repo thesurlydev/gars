@@ -30,3 +30,7 @@ MFA is great for added security but makes it difficult to automate things.
 Google Authenticator is a software-based authenticator by Google that implements two-step verification services using the Time-based One-time Password Algorithm and HMAC-based One-time Password algorithm, for authenticating users of software applications.
 
 It's also one of several mechanisms that [Okta](https://www.okta.com/) uses for MFA.
+
+## Credit
+
+This is just a simple wrapper around the [google-authenticator](https://crates.io/crates/google-authenticator) library.
