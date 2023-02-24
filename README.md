@@ -2,6 +2,12 @@
 
 If you use [Google Authenticator](https://github.com/google/google-authenticator) for multi-factor authentication (MFA) and would like to automate authentication, then GARS is for you.
 
+## Install from source
+```shell
+cargo install --path .
+```
+
+
 ## Usage
 
 Create an environment variable with your Google Authenticator secret:
